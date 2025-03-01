@@ -14,4 +14,8 @@ contract FundMeTest is Test {
         assert(fundMe.MINIMUM_USD() == 5e18);
     }
 
+    function testOwnerIsMegSender() public view {
+        assert(fundMe.i_owner() == address(this));
+    }
+
 }
